@@ -30,17 +30,28 @@
 // });
 
 // 2-16
-window.onload = function () {
-	document.querySelector('#btn1').addEventListener('click', function () {
-		var radios = document.getElementsByName('radio1');
-		var str = '';
-		console.log(radios);
-		for (var i = 0; i < radios.length; i++) {
-			if (radios[i].checked) {
-				str = radios[i].value;
-				break;
-			}
-		}
-		document.querySelector('#msg').textContent = 'checked: ' + str
+// window.onload = function () {
+// 	document.querySelector('#btn1').addEventListener('click', function () {
+// 		var radios = document.getElementsByName('radio1');
+// 		var str = '';
+// 		console.log(radios);
+// 		for (var i = 0; i < radios.length; i++) {
+// 			if (radios[i].checked) {
+// 				str = radios[i].value;
+// 				break;
+// 			}
+// 		}
+// 		document.querySelector('#msg').textContent = 'checked: ' + str
+// 	});
+// }
+
+// 2-18
+$(function () {
+	$('#btn1').click(function () {
+		var msg = 'selected: ';
+		$("#sell option:selected").each(function () {
+			msg += $(this).val() + " ";
+		});
+		$('#msg').text(msg);
 	});
-}
+});
