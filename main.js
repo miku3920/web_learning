@@ -9,6 +9,14 @@
 // });
 
 // 2-10
+// $(function () {
+// 	$('#msg').html('這是<a href="http://google.com">Link</a>的範例。');
+// });
+
+// 2-12
 $(function () {
-	$('#msg').html('這是<a href="http://google.com">Link</a>的範例。');
+	$('#btn1').click(function () {
+		var str = $('#text1').val();
+		$('#msg').text('you typed: ' + str + '.');
+	});
 });
