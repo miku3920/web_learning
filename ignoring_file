@@ -1,1 +1,4 @@
-被忽略的檔案
+commit 一次後忽略修改：
+git update-index --assume-unchanged ignoring_file
+直接忽略檔案不 commit：
+在 .gitignore 中加入檔名
