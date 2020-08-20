@@ -14,9 +14,17 @@
 // });
 
 // 2-12
+// $(function () {
+// 	$('#btn1').click(function () {
+// 		var str = $('#text1').val();
+// 		$('#msg').text('you typed: ' + str + '.');
+// 	});
+// });
+
+// 2-15
 $(function () {
 	$('#btn1').click(function () {
-		var str = $('#text1').val();
-		$('#msg').text('you typed: ' + str + '.');
+		var val = $('input[name=radio1]:checked').val();
+		$('#msg').text('checked: ' + val);
 	});
 });
