@@ -57,16 +57,23 @@
 // });
 
 // 2-19 without jQuery
-window.onload = function () {
-	document.querySelector('#btn1').addEventListener('click', function () {
-		var sel = document.querySelector('#sell');
-		var opts = sel.getElementsByTagName('option');
-		var msg = 'selected: ';
-		for (var i = 0; i < opts.length; i++){
-			if (opts[i].selected) {
-				msg += opts[i].value + ' ';
-			}
-		}
-		document.querySelector('#msg').textContent = msg;
+// window.onload = function () {
+// 	document.querySelector('#btn1').addEventListener('click', function () {
+// 		var sel = document.querySelector('#sell');
+// 		var opts = sel.getElementsByTagName('option');
+// 		var msg = 'selected: ';
+// 		for (var i = 0; i < opts.length; i++){
+// 			if (opts[i].selected) {
+// 				msg += opts[i].value + ' ';
+// 			}
+// 		}
+// 		document.querySelector('#msg').textContent = msg;
+// 	});
+// }
+
+// 2-21 css
+$(function () {
+	$('#btn1').click(function () {
+		$('li').css('color', 'white').css('background','red');
 	});
-}
+});
