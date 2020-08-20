@@ -22,9 +22,25 @@
 // });
 
 // 2-15
-$(function () {
-	$('#btn1').click(function () {
-		var val = $('input[name=radio1]:checked').val();
-		$('#msg').text('checked: ' + val);
+// $(function () {
+// 	$('#btn1').click(function () {
+// 		var val = $('input[name=radio1]:checked').val();
+// 		$('#msg').text('checked: ' + val);
+// 	});
+// });
+
+// 2-16
+window.onload = function () {
+	document.querySelector('#btn1').addEventListener('click', function () {
+		var radios = document.getElementsByName('radio1');
+		var str = '';
+		console.log(radios);
+		for (var i = 0; i < radios.length; i++) {
+			if (radios[i].checked) {
+				str = radios[i].value;
+				break;
+			}
+		}
+		document.querySelector('#msg').textContent = 'checked: ' + str
 	});
-});
+}
