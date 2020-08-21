@@ -8,3 +8,13 @@ h1 {
 	font-size: 28px;
 	color: #999;
 }
+
+.A{
+	color: green;
+	background: white;
+}
+
+.B{
+	color: white;
+	background: blue;
+}

@@ -72,8 +72,24 @@
 // }
 
 // 2-21 css
+// $(function () {
+// 	$('#btn1').click(function () {
+// 		$('li').css('color', 'white').css('background','red');
+// 	});
+// });
+
+// 2-24 class
+var flg = false;
+
 $(function () {
 	$('#btn1').click(function () {
-		$('li').css('color', 'white').css('background','red');
+		if (flg) {
+			$('li[name=a]').addClass('A').removeClass('B');
+			$('li[name=b]').addClass('B').removeClass('A');
+		} else {
+			$('li[name=a]').addClass('B').removeClass('A');
+			$('li[name=b]').addClass('A').removeClass('B');
+		}
+		flg = !flg;
 	});
 });
