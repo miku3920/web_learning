@@ -94,9 +94,16 @@
 // });
 
 // 2-27 create element
+// $(function () {
+// 	$('#btn1').click(function () { 
+// 		var obj = $('<p>' + $('#text1').val() + '</p>');
+// 		$('#msg').append(obj);
+// 	});
+// });
+
+// 2-30 wrap
 $(function () {
-	$('#btn1').click(function () { 
-		var obj = $('<p>' + $('#text1').val() + '</p>');
-		$('#msg').append(obj);
+	$('#btn1').click(function () {
+		$('p[name=msg]').wrap('<div></div>');
 	});
 });
