@@ -116,8 +116,22 @@
 // });
 
 // 2-33 Ajax load
+// $(function () {
+// 	$('#btn1').click(function () {
+// 		$('#msg').load('data.txt');
+// 	});
+// });
+
+// 2-33 Ajax get
 $(function () {
 	$('#btn1').click(function () {
-		$('#msg').load('data.txt');
+		$.get('data.txt', function (response, status, xhr) {
+			var ol = $('<ol></ol>');
+			var arr = response.split('\n');
+			for (var item in arr) {
+				ol.append('<li>' + arr[item] + '</li>')
+			}
+			$('#msg').append(ol);
+		});
 	});
 });
