@@ -102,8 +102,15 @@
 // });
 
 // 2-30 wrap
+// $(function () {
+// 	$('#btn1').click(function () {
+// 		$('p[name=msg]').wrap('<div></div>');
+// 	});
+// });
+
+// 2-31 wrapAll
 $(function () {
-	$('#btn1').click(function () {
-		$('p[name=msg]').wrap('<div></div>');
+	$('#btn1').click(function () { 
+		$('p[name=msg]').wrapAll('<div></div>');
 	});
 });
