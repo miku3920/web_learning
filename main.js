@@ -79,17 +79,24 @@
 // });
 
 // 2-24 class
-var flg = false;
+// var flg = false;
+// $(function () {
+// 	$('#btn1').click(function () {
+// 		if (flg) {
+// 			$('li[name=a]').addClass('A').removeClass('B');
+// 			$('li[name=b]').addClass('B').removeClass('A');
+// 		} else {
+// 			$('li[name=a]').addClass('B').removeClass('A');
+// 			$('li[name=b]').addClass('A').removeClass('B');
+// 		}
+// 		flg = !flg;
+// 	});
+// });
 
+// 2-27 create element
 $(function () {
-	$('#btn1').click(function () {
-		if (flg) {
-			$('li[name=a]').addClass('A').removeClass('B');
-			$('li[name=b]').addClass('B').removeClass('A');
-		} else {
-			$('li[name=a]').addClass('B').removeClass('A');
-			$('li[name=b]').addClass('A').removeClass('B');
-		}
-		flg = !flg;
+	$('#btn1').click(function () { 
+		var obj = $('<p>' + $('#text1').val() + '</p>');
+		$('#msg').append(obj);
 	});
 });
