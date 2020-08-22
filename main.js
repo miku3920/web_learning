@@ -109,8 +109,15 @@
 // });
 
 // 2-31 wrapAll
+// $(function () {
+// 	$('#btn1').click(function () { 
+// 		$('p[name=msg]').wrapAll('<div></div>');
+// 	});
+// });
+
+// 2-33 Ajax load
 $(function () {
-	$('#btn1').click(function () { 
-		$('p[name=msg]').wrapAll('<div></div>');
+	$('#btn1').click(function () {
+		$('#msg').load('data.txt');
 	});
 });
