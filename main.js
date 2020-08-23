@@ -180,21 +180,11 @@
 // });
 
 // 2-44 fade
-// $(function () {
-// 	$('#image1').click(function () { 
-// 		$('#image1').fadeOut(200);
-// 	});
-// 	$('#btn1').click(function () { 
-// 		$('#image1').fadeIn(200);
-// 	});
-// });
-
-// 2-45 slide
 $(function () {
 	$('#image1').click(function () { 
-		$('#frame').slideUp(200);
+		$('#image1').fadeOut(200);
 	});
 	$('#btn1').click(function () { 
-		$('#frame').slideDown(200);
+		$('#image1').fadeIn(200);
 	});
 });
