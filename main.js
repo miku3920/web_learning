@@ -151,14 +151,21 @@
 // });
 
 // 2-39 hide & show
+// $(function () {
+// 	var flg = false;
+// 	$('#btn1').click(function () {
+// 		if (flg) {
+// 			$('#image').show(500);
+// 		} else {
+// 			$('#image').hide(500);
+// 		}
+// 		flg = !flg;
+// 	});
+// });
+
+// 2-40 toggle
 $(function () {
-	var flg = false;
-	$('#btn1').click(function () {
-		if (flg) {
-			$('#image').show(500);
-		} else {
-			$('#image').hide(500);
-		}
-		flg = !flg;
+	$('#btn1').click(function () { 
+		$('#image').toggle(200);
 	});
 });
