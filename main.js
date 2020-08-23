@@ -123,15 +123,29 @@
 // });
 
 // 2-33 Ajax get
+// $(function () {
+// 	$('#btn1').click(function () {
+// 		$.get('data.txt', function (response, status, xhr) {
+// 			var ol = $('<ol></ol>');
+// 			var arr = response.split('\n');
+// 			for (var item in arr) {
+// 				ol.append('<li>' + arr[item] + '</li>')
+// 			}
+// 			$('#msg').append(ol);
+// 		});
+// 	});
+// });
+
+// 2-37 Ajax getJSON
 $(function () {
 	$('#btn1').click(function () {
-		$.get('data.txt', function (response, status, xhr) {
-			var ol = $('<ol></ol>');
-			var arr = response.split('\n');
-			for (var item in arr) {
-				ol.append('<li>' + arr[item] + '</li>')
-			}
-			$('#msg').append(ol);
+		var id = $('#text1').val();
+		$.getJSON("data.php", { 'id': id }, function (response, status, xhr) {
+			var ol = $('<ul></ul>');
+			ol.append('<li>姓名：' + response.name + '</li>');
+			ol.append('<li>電郵信箱：' + response.mail + '</li>');
+			ol.append('<li>電話號碼：' + response.tel + '</li>');
+			$('#msg').empty().append(ol);
 		});
 	});
 });
