@@ -164,8 +164,27 @@
 // });
 
 // 2-40 toggle
+// $(function () {
+// 	$('#btn1').click(function () { 
+// 		$('#image').toggle(200);
+// 	});
+// });
+
+// 2-42 toggle2
+// $(function () {
+// 	$('#btn1').click(function () { 
+// 		$('#image2').toggle(200, function () {
+// 			$('#image1').toggle(200);
+// 		});
+// 	});
+// });
+
+// 2-44 fade
 $(function () {
+	$('#image1').click(function () { 
+		$('#image1').fadeOut(200);
+	});
 	$('#btn1').click(function () { 
-		$('#image').toggle(200);
+		$('#image1').fadeIn(200);
 	});
 });
