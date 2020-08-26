@@ -1,18 +1,12 @@
-function convert<T>(item: T): string {
-	switch (typeof item) {
-		case 'number':
-			return Math.floor(item).toString()
-		case 'string':
-			return item.toUpperCase()
-		case 'boolean':
-			return item ? 'yes' : 'no'
-		default:
-			return 'any';
+function total(...item: number[]): string{
+	let re: number = 0
+	for (let i: number = 0; i < item.length; i++){
+		re += item[i];
 	}
+	return String(re);
 }
 
 function doClick(): void {
-	let val: string = 'hello'
 	let msg: Element = document.querySelector('#msg')
-	msg.innerHTML = convert(val)
+	msg.innerHTML = total(1,2,3,4,5)
 }

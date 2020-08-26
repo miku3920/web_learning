@@ -1,17 +1,15 @@
-function convert(item) {
-    switch (typeof item) {
-        case 'number':
-            return Math.floor(item).toString();
-        case 'string':
-            return item.toUpperCase();
-        case 'boolean':
-            return item ? 'yes' : 'no';
-        default:
-            return 'any';
+function total() {
+    var item = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        item[_i] = arguments[_i];
     }
+    var re = 0;
+    for (var i = 0; i < item.length; i++) {
+        re += item[i];
+    }
+    return String(re);
 }
 function doClick() {
-    var val = 'hello';
     var msg = document.querySelector('#msg');
-    msg.innerHTML = convert(val);
+    msg.innerHTML = total(1, 2, 3, 4, 5);
 }
