@@ -1,9 +1,20 @@
-function calc(price: number, tax: number): number {
-	return Math.floor(price * (1.0 + tax))
+function convert(item: number): string
+function convert(item: string): string
+function convert(item: boolean): string
+
+function convert(item: any): string {
+	switch (typeof item) {
+		case 'number':
+			return Math.floor(item).toString()
+		case 'string':
+			return item.toUpperCase()
+		case 'boolean':
+			return item ? 'yes' : 'no'
+	}
 }
 
 function doClick(): void {
-	let text1: HTMLInputElement = document.querySelector('#text1')
+	let val: string = 'hello'
 	let msg: Element = document.querySelector('#msg')
-	msg.innerHTML = calc(+text1.value, 0.05) + ' 元'
+	msg.innerHTML = convert(val)
 }

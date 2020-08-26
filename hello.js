@@ -1,8 +1,15 @@
-function calc(price, tax) {
-    return Math.floor(price * (1.0 + tax));
+function convert(item) {
+    switch (typeof item) {
+        case 'number':
+            return Math.floor(item).toString();
+        case 'string':
+            return item.toUpperCase();
+        case 'boolean':
+            return item ? 'yes' : 'no';
+    }
 }
 function doClick() {
-    var text1 = document.querySelector('#text1');
+    var val = 'hello';
     var msg = document.querySelector('#msg');
-    msg.innerHTML = calc(+text1.value, 0.05) + ' 元';
+    msg.innerHTML = convert(val);
 }
