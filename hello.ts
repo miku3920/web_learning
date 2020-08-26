@@ -1,8 +1,20 @@
-var price: number = 12300;
-var tax: number = 0.05;
+enum Season { spring, summer, autumn, winter }
 
-var res: number = price * (1.0 + tax);
-var msg: string = price + ' 元的含稅金額為 ' + res + ' 元。';
+let s: Season = Season.summer
 
-document.write('<h1>Sample</h1>');
-document.write(msg);
+switch (+s) {
+	case Season.spring:
+		document.write('<h1>Spring</h1>')
+		break
+	case Season.summer:
+		document.write('<h1>Summer</h1>')
+		break
+	case Season.autumn:
+		document.write('<h1>Autumn</h1>')
+		break
+	case Season.winter:
+		document.write('<h1>Winter</h1>')
+		break
+}
+
+document.write('<p>此頁面會顯示目前季節。</p>')
