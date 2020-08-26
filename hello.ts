@@ -1,11 +1,8 @@
-class MyClass {
-	constructor(public title: string, public message: string) { }
+var price: number = 12300;
+var tax: number = 0.05;
 
-	print() {
-		return "<h1>" + this.title + "你好" + "<p>" + this.message + "</p>";
-	}
-};
+var res: number = price * (1.0 + tax);
+var msg: string = price + ' 元的含稅金額為 ' + res + ' 元。';
 
-var msg: MyClass = new MyClass("Hello", "this TypeScript sample!");
-
-document.write(msg.print());
+document.write('<h1>Sample</h1>');
+document.write(msg);

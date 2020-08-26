@@ -1,13 +1,6 @@
-var MyClass = /** @class */ (function () {
-    function MyClass(title, message) {
-        this.title = title;
-        this.message = message;
-    }
-    MyClass.prototype.print = function () {
-        return "<h1>" + this.title + "你好" + "<p>" + this.message + "</p>";
-    };
-    return MyClass;
-}());
-;
-var msg = new MyClass("Hello", "this TypeScript sample!");
-document.write(msg.print());
+var price = 12300;
+var tax = 0.05;
+var res = price * (1.0 + tax);
+var msg = price + ' 元的含稅金額為 ' + res + ' 元。';
+document.write('<h1>Sample</h1>');
+document.write(msg);
