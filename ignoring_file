@@ -1,5 +1,0 @@
-commit 一次後忽略修改：
-git update-index --assume-unchanged ignoring_file
-直接忽略檔案不追蹤：
-在 .gitignore 中加入檔名
-使用 git clean -f 時不清除
