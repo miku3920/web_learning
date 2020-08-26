@@ -1,8 +1,4 @@
-function convert(item: number): string
-function convert(item: string): string
-function convert(item: boolean): string
-
-function convert(item: any): string {
+function convert<T>(item: T): string {
 	switch (typeof item) {
 		case 'number':
 			return Math.floor(item).toString()
@@ -10,6 +6,8 @@ function convert(item: any): string {
 			return item.toUpperCase()
 		case 'boolean':
 			return item ? 'yes' : 'no'
+		default:
+			return 'any';
 	}
 }
 

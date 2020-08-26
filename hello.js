@@ -6,6 +6,8 @@ function convert(item) {
             return item.toUpperCase();
         case 'boolean':
             return item ? 'yes' : 'no';
+        default:
+            return 'any';
     }
 }
 function doClick() {
