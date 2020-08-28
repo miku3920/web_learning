@@ -1,19 +1,23 @@
-function printm(n: number, f: (_: number) => number): string {
-	var re: number = f(n)
-	return '<p>結果：' + re + '</p>'
+class Person {
+	name: string
+	age: number
+
+	constructor(n: string, y: number) {
+		this.name = n
+		this.age = y
+	}
+
+	print(): string {
+		let msg: string = '<p>My name is ' + this.name + '. I am ' + this.age + ' year old.</p>'
+		return msg
+	}
 }
 
 function doClick(): void {
-	let val: number = +((<HTMLInputElement>document.querySelector('#text1')).value)
-	let msg: Element = document.querySelector('#msg')
+	let val: string = (<HTMLInputElement>document.querySelector('#text1')).value
+	let arr: string[] = val.split(',')
 
-	let a = (n: number): number => n * n
-	let b = (n: number): number => {
-		let total: number = 0;
-		for (let i: number = 1; i <= n; i++) {
-			total += i
-		}
-		return total
-	}
-	msg.innerHTML = printm(val, b)
+	let obj: Person = new Person(arr[0], parseInt(arr[1]))
+	let msg: Element = document.querySelector('#msg')
+	msg.innerHTML = obj.print()
 }
