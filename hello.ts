@@ -21,7 +21,7 @@ class Student extends Person {
 		this.grade = g
 	}
 
-	printAll(): string {
+	print(): string {
 		let msg: string = '<p>我是 ' + this.name + '，今年 ' + this.age + ' 歲，現在 ' + this.grade + ' 年級。</p>'
 		return msg
 	}
@@ -32,12 +32,15 @@ function doClick(): void {
 	let val: string = (<HTMLInputElement>document.querySelector('#text1')).value
 
 	let arr: string[] = val.split(',')
-
+	let obj: Person = null
 	if (arr.length == 2) {
-		let obj: Person = new Person(arr[0], parseInt(arr[1]))
-		msg.innerHTML = obj.print()
-	}else if (arr.length == 3) {
-		let obj: Student = new Student(arr[0], parseInt(arr[1]), parseInt(arr[2]))
-		msg.innerHTML = obj.printAll()
+		obj = new Person(arr[0], parseInt(arr[1]))
+	} else if (arr.length == 3) {
+		obj = new Student(arr[0], parseInt(arr[1]), parseInt(arr[2]))
 	}
+	msg.innerHTML = obj.print()
+	for (var prop in obj) {
+		console.log(prop + ': ' + obj[prop])
+	}
+	console.log(obj)
 }
