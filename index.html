@@ -10,8 +10,11 @@
 
 <body>
 	<h1>Vue.js</h1>
-	<p id="msg">{{message}}</p>
-	
+	<div id="msg">
+		<p id="msg">{{message}}</p>
+		<input type="text" v-model="message">
+	</div>
+
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
 	<script src="main.js"></script>
 </body>
