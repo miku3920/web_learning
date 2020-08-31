@@ -1,16 +1,16 @@
 new Vue({
 	el: '#msg',
 	data: {
-		number: '0'
+		woTax: '0'
 	},
 	computed: {
-		result() {
-			// var total = 0;
-			// for (var i = 0; i <= this.number; i++){
-			// 	total += i;
-			// }
-			// return total;
-			return (+this.number + 1) * +this.number / 2;
+		wTax: {
+			get(){
+				return parseInt(this.woTax * 1.05);
+			},
+			set(val) {
+				this.woTax = Math.ceil(val / 1.05);
+			}
 		}
 	}
 })
