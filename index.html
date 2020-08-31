@@ -11,7 +11,7 @@
 <body>
 	<h1>Vue.js</h1>
 	<div id="msg">
-		<p id="msg" v-html="message"></p>
+		<p>{{ message.toString() }}</p>
 		<input type="text" v-model="text1">
 		<input type="button" v-on:click="doAction" value="click">
 	</div>
