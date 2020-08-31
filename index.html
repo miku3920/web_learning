@@ -10,8 +10,26 @@
 
 <body>
 	<h1>Vue.js</h1>
-		<p id="msg" :class="{'a':isA, 'b':isB}" @click="change()">class 操作實例。</p>
-
+	<div id="msg">
+		<p :style="{'color':selF, 'background':selB}" @click="change()">樣式操作實例。</p>
+		
+		<p>
+			<select v-model="selF">
+				<option>White</option>
+				<option>Black</option>
+				<option>Red</option>
+				<option>blue</option>
+				<option>green</option>
+			</select>
+			<select v-model="selB">
+				<option>White</option>
+				<option>Black</option>
+				<option>Red</option>
+				<option>blue</option>
+				<option>green</option>
+			</select>
+		</p>
+	</div>
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
 	<script src="main.js"></script>
 </body>
