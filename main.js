@@ -1,18 +1,16 @@
 new Vue({
 	el: '#msg',
 	data: {
-		msgArray: [],
-		message: '',
-		text1: ''
+		number: '0'
 	},
-	created() {
-		this.msgArray.push('sample message.');
-		this.message = this.msgArray;
-	},
-	methods: {
-		doAction() {
-			this.msgArray.push(this.text1);
-			this.message = this.msgArray;
+	computed: {
+		result() {
+			// var total = 0;
+			// for (var i = 0; i <= this.number; i++){
+			// 	total += i;
+			// }
+			// return total;
+			return (+this.number + 1) * +this.number / 2;
 		}
 	}
 })
