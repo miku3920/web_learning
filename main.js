@@ -1,16 +1,13 @@
 new Vue({
 	el: '#msg',
 	data: {
-		woTax: '0'
+		isA: true,
+		isB: false
 	},
-	computed: {
-		wTax: {
-			get(){
-				return parseInt(this.woTax * 1.05);
-			},
-			set(val) {
-				this.woTax = Math.ceil(val / 1.05);
-			}
+	methods: {
+		change() {
+			this.isA = !this.isA;
+			this.isB = !this.isB;
 		}
 	}
 })

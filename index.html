@@ -10,10 +10,7 @@
 
 <body>
 	<h1>Vue.js</h1>
-	<div id="msg">
-		<p>未稅價格：<input type="text" v-model="woTax"></p>
-		<p>含稅價格：<input type="text" v-model="wTax"></p>
-	</div>
+		<p id="msg" :class="{'a':isA, 'b':isB}" @click="change()">class 操作實例。</p>
 
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
 	<script src="main.js"></script>
