@@ -11,19 +11,7 @@
 <body>
 	<h1>Vue.js</h1>
 	<div id="msg">
-		<select size="5" multiple v-model="data">
-			<option>Windows</option>
-			<option>macOS</option>
-			<option>Linux</option>
-			<option>Android</option>
-			<option>iOS</option>
-		</select>
-		<hr>
-		<ol>
-			<li v-for="obj in data">
-				{{obj}}
-			</li>
-		</ol>
+		<my-component></my-component>
 	</div>
 
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
