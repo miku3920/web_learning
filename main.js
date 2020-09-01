@@ -1,11 +1,9 @@
 new Vue({
 	el: '#msg',
 	data: {
-		selF: '',
-		selB: ''
+		flg: false
 	},
 	created() {
-		this.selF = 'red';
-		this.selB = 'white';
+		this.flg = true;
 	}
 })
