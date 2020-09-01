@@ -11,18 +11,12 @@
 <body>
 	<h1>Vue.js</h1>
 	<div id="msg">
-		<my-component items="one, two, three"></my-component>
+		<div v-my-directive="message">ok.</div>
+		
+		<input type="text" v-model="val">
+		<input type="button" @click="myfunc()" value="click">
 	</div>
 
-	<template id="my-template">
-		<table>
-			<tr v-for="obj in items.split(', ')">
-				<td style="border: 1px solid #ccc;padding: 0px 10px;">
-					{{obj}}
-				</td>
-			</tr>
-		</table>
-	</template>
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
 	<script src="main.js"></script>
 </body>
