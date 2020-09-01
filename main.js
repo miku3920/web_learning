@@ -1,9 +1,10 @@
 new Vue({
 	el: '#msg',
 	data: {
-		flg: false
-	},
-	created() {
-		this.flg = true;
+		data: [
+			'Hello!',
+			'Welcome.',
+			'Good-bye...'
+		]
 	}
 })

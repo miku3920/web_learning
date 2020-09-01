@@ -11,12 +11,11 @@
 <body>
 	<h1>Vue.js</h1>
 	<div id="msg">
-		<div>
-			<input type="checkbox" id="ck" v-model="flg">
-			<label for="ck">顯示</label>
-		</div>
-		<p v-if="flg">操作訊息顯示狀態。</p>
-		<p v-else>[ ※目前為隱藏狀態 ]</p>
+		<ul>
+			<li v-for="obj in data">
+				{{obj}}
+			</li>
+		</ul>
 	</div>
 
 	<script src="./node_modules/vue/dist/vue.min.js"></script>
