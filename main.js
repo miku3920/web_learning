@@ -1,13 +1,17 @@
 $(function () {
-	let ButtonView = Backbone.View.extend({
-		events: {
-			'click': 'onclick'
+	let MyTagView = Backbone.View.extend({
+		tagName: 'p',
+		className: 'msg',
+		id() {
+			return _.uniqueId('item');
 		},
-		el: '#btn1',
-		onclick() {
-			alert('click me!');
+		attributes: {
+			'style': 'color: white; background: red; padding: 5px 10px;'
 		}
 	});
 
-	let buttonView = new ButtonView();
+	let myTag = new MyTagView();
+	myTag.el.textContent = '這是新增的標籤。';
+	console.log(myTag);
+	$('#msg').html(myTag.el);
 });
