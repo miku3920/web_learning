@@ -1,14 +1,13 @@
 {
 	"env": {
 		"es6": true,
-		"node": true,
 		"browser": true,
-		"commonjs": true,
 		"jquery": true
 	},
 	"extends": [
 		"eslint:recommended",
-		"plugin:backbone/recommended"
+		"plugin:backbone/recommended",
+		"airbnb-base"
 	],
 	"plugins": [
 		"backbone"
@@ -30,11 +29,8 @@
 			"error",
 			"always"
 		],
-		"no-unused-vars": [
-			"off"
-		],
-		"backbone/no-native-jquery":[
-			"off"
-		]
+		"no-unused-vars": "off",
+		"backbone/no-native-jquery":"off",
+		"no-tabs": "off"
 	}
 }
