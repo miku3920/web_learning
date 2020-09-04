@@ -1,13 +1,16 @@
-$(function(){
+$(function () {
 	let MyView = Backbone.View.extend({
+		el: '#msg',
+
 		render() {
-			this.$el.text('Hello Backbone.js!');
+			this.$('#title').text('※使用作業系統平台');
+			this.$('#item1').text('Windows');
+			this.$('#item2').text('macOS');
+			this.$('#item3').text('Linux');
 			return this;
 		},
 	});
 
 	let myView = new MyView();
-
-	$('#msg').append(myView.render().$el);
-	
+	myView.render();
 });
