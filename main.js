@@ -1,16 +1,16 @@
 $(() => {
-	const MyTagView = Backbone.View.extend({
-		tagName: 'p',
-		className: 'msg',
-		id() {
-			return _.uniqueId('item');
-		},
-		attributes: {
-			style: 'color: white; background: red; padding: 5px 10px;',
+	const MyView = Backbone.View.extend({
+		el: '#msg',
+		tmp1: _.template($('#myview-template').html()),
+		render() {
+			this.$el.html(this.tmp1({
+				title: '山田太郎',
+				content: '任職ＯＯ銀行<br>e-mail: taro@yamada',
+			}));
+			return this;
 		},
 	});
 
-	const myTag = new MyTagView();
-	myTag.el.textContent = '這是新增的標籤。';
-	$('#msg').html(myTag.el);
+	const myView = new MyView();
+	myView.render();
 });
