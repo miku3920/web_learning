@@ -41,4 +41,22 @@ $(() => {
 	}
 
 	$('#findBtn').bind('click', onclickFind);
+
+	function onclickCreate(event) {
+		myDataCollection.create(
+			{
+				name: $('#name').val(),
+				mail: $('#mail').val(),
+				tel: $('#tel').val(),
+			}, {
+				success(collection, result, options) {
+					$('#name').val('');
+					$('#mail').val('');
+					$('#tel').val('');
+				},
+			},
+		);
+	}
+
+	$('#createBtn').bind('click', onclickCreate);
 });
