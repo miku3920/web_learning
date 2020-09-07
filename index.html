@@ -12,15 +12,27 @@
 
 <body>
 	<h1>Backbone.js</h1>
-	<p id="msg"></p>
-	<div>
-		<input type="text" id="input1">
-		<input type="button" id="btn1">
-	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>NAME</th>
+				<th>MALL</th>
+				<th>TEl</th>
+			</tr>
+		</thead>
+		<tbody id="list"></tbody>
+	</table>
 
 	<script src="./node_modules/jquery/dist/jquery.js"></script>
 	<script src="./node_modules/underscore/underscore.js"></script>
 	<script src="./node_modules/backbone/backbone.js"></script>
+	<script id="mydata_tmp" type="text/template">
+		<tr>
+			<td><%= name %></td>
+			<td><%= mail %></td>
+			<td><%= tel %></td>
+		</tr>
+	</script>
 	<script src="main.js"></script>
 </body>
 
