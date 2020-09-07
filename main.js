@@ -32,4 +32,13 @@ $(() => {
 	const myDataItemView = new MyDataItemView({
 		model: MyDataCollection,
 	});
+
+	function onclickFind(event) {
+		const id = $('#my_id').val();
+		const result = myDataCollection.get(id);
+		$('#list').empty();
+		myDataItemView.render(result);
+	}
+
+	$('#findBtn').bind('click', onclickFind);
 });
