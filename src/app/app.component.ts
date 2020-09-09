@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-	title = 'Angular';
+	title = 'Hello!';
+
+	message = '這是 Angular 的範例程式。';
 }
