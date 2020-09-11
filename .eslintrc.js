@@ -47,7 +47,7 @@ module.exports = {
        * See packages/eslint-plugin/src/configs/README.md
        * for what this recommended config contains.
        */
-      extends: ['plugin:@angular-eslint/recommended', 'airbnb-base'],
+      extends: ['plugin:@angular-eslint/recommended', 'plugin:@typescript-eslint/recommended', 'airbnb-base'],
       settings: {
         'import/resolver': {
           node: {
@@ -56,6 +56,10 @@ module.exports = {
         }
       },
       rules: {
+        'no-useless-constructor': 'off',
+        'no-empty-function': 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
         'no-tabs': 'off',
         'indent': ['error', 'tab'],
         'import/prefer-default-export': 'off',
@@ -63,6 +67,14 @@ module.exports = {
         'import/extensions': [
           'error',
           { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }
+        ],
+        'comma-dangle': [
+          'error', 
+          'always-multiline'
+        ],
+        'semi': [
+          'error',
+          'never'
         ],
         /**
          * Any TypeScript related rules you wish to use/reconfigure over and above the

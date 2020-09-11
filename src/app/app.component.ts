@@ -1,20 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { MyFormModel } from './myformmodel'
 
 @Component({
-	selector: 'app-1',
+	selector: 'app-form',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-	title = 'Hello!';
+	message: string;
 
-	message = '這是 Angular 的範例程式。';
-}
+	model = new MyFormModel('message...');
 
-@Component({
-	selector: 'app-2',
-	template: '<h1>{{title}}</h1>',
-})
-export class OtherComponent {
-	title = 'Second Component!';
+	onSubmit():void {
+		this.message = `you typed: ${this.model.msg}`
+	}
 }

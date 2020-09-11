@@ -1,2 +1,6 @@
-<h1>{{title}}</h1>
+<h1>Angular web</h1>
 <p>{{message}}</p>
+<form>
+	<input type="text" id="msg" name="msg" [(ngModel)]="model.msg">
+	<input type="button" (click)="onSubmit();" value="click">
+</form>
