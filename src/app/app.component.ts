@@ -1,20 +1,23 @@
 import { Component } from '@angular/core'
 import { MyFormModel } from './myformmodel'
 
+type style = { color: string, background: string, fontSize: string, padding: string }
+
 @Component({
 	selector: 'app-form',
 	templateUrl: './app.component.html',
 })
 export class AppComponent {
-	message: string
+	message = 'this is sample component.'
 
-	model = new MyFormModel('', [])
+	model = new MyFormModel('blue', 'white', 24, 10)
 
-	items1 = ['北海道', '本州', '四國', '九州', '沖繩']
-
-	items2 = ['Windows', 'macOS', 'Linux', 'Android', 'iOS']
-
-	onSubmit(): void {
-		this.message = `${this.model.select1} [${this.model.select2}]`
+	setStyle(): style {
+		return {
+			color: this.model.color,
+			background: this.model.background,
+			fontSize: `${this.model.fontSize}pt`,
+			padding: `${this.model.padding}px`,
+		}
 	}
 }

@@ -1,13 +1,10 @@
 <h1>Angular web</h1>
-<p>{{message}}</p>
-<form>
-	<div>
-		<select [(ngModel)]="model.select1" [ngModelOptions]="{standalone: true}" [size]="items1.length">
-			<option *ngFor="let item of items1" [value]="item">{{item}}</option>
-		</select>
-		<select [(ngModel)]="model.select2" [ngModelOptions]="{standalone: true}" [size]="items2.length" multiple>
-			<option *ngFor="let item of items2" [value]="item">{{item}}</option>
-		</select>
-	</div>
-	<input type="button" (click)="onSubmit()" value="click">
-</form>
+<p [ngStyle]="setStyle()">{{message}}</p>
+<input type="text" [(ngModel)]="model.color">
+<br>
+<input type="text" [(ngModel)]="model.background">
+<br>
+<input type="text" [(ngModel)]="model.fontSize">
+<br>
+<input type="text" [(ngModel)]="model.padding">
+<br>

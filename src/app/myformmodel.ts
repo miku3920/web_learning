@@ -1,6 +1,8 @@
 export class MyFormModel {
 	constructor(
-		public select1: string,
-		public select2: string[],
+		public color: string,
+		public background: string,
+		public fontSize: number,
+		public padding: number,
 	) { }
 }
