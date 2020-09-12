@@ -76,6 +76,10 @@ module.exports = {
           'error',
           'never'
         ],
+        'linebreak-style': [
+          'error',
+          'windows'
+        ],
         /**
          * Any TypeScript related rules you wish to use/reconfigure over and above the
          * recommended set provided by the @angular-eslint project would go here.

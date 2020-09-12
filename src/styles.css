@@ -4,11 +4,17 @@ body {
 	padding: 5px 20px;
 	line-height: 150%;
 }
-
 h1 {
 	font-size: 24pt;
 }
-
 p {
 	font-size: 18pt;
+}
+.classA {
+	color: yellow;
+	background: #993;
+}
+.classB{
+	font-size: 24pt;
+	padding: 20pt;
 }

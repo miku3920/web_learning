@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 import { MyFormModel } from './myformmodel'
 
-type style = { color: string, background: string, fontSize: string, padding: string }
+type myclass = { classA: boolean, classB: boolean }
 
 @Component({
 	selector: 'app-form',
@@ -10,14 +10,12 @@ type style = { color: string, background: string, fontSize: string, padding: str
 export class AppComponent {
 	message = 'this is sample component.'
 
-	model = new MyFormModel('blue', 'white', 24, 10)
+	model = new MyFormModel(false, false)
 
-	setStyle(): style {
+	setClass(): myclass {
 		return {
-			color: this.model.color,
-			background: this.model.background,
-			fontSize: `${this.model.fontSize}pt`,
-			padding: `${this.model.padding}px`,
+			classA: this.model.classA,
+			classB: this.model.classB,
 		}
 	}
 }

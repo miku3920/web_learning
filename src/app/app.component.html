@@ -1,10 +1,11 @@
 <h1>Angular web</h1>
-<p [ngStyle]="setStyle()">{{message}}</p>
-<input type="text" [(ngModel)]="model.color">
-<br>
-<input type="text" [(ngModel)]="model.background">
-<br>
-<input type="text" [(ngModel)]="model.fontSize">
-<br>
-<input type="text" [(ngModel)]="model.padding">
-<br>
+<p [ngClass]="setClass()">{{message}}</p>
+<hr>
+<div>
+	<input type="checkbox" id="ck1" [(ngModel)]="model.classA">
+	<label for="ck1">class A</label>
+</div>
+<div>
+	<input type="checkbox" id="ck2" [(ngModel)]="model.classB">
+	<label for="ck2">class B</label>
+</div>
