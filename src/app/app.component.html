@@ -2,19 +2,12 @@
 <p>{{message}}</p>
 <form>
 	<div>
-		<label for="msg">Message: </label>
-		<input type="text" id="msg" name="msg" [(ngModel)]="model.msg">
-	</div>
-	<div>
-		<input type="checkbox" id="check" name="radio" checked [(ngModel)]="model.check">
-		<label for="check">Check box</label>
-	</div>
-	<div>
-		<input type="radio" id="r1" name="radio" (change)="model.radio='A'">
-		<label for="r1">Radio 1</label>
-		<input type="radio" id="r2" name="radio" (change)="model.radio='B'">
-		<label for="r2">Radio 2</label>
+		<select [(ngModel)]="model.select1" [ngModelOptions]="{standalone: true}" [size]="items1.length">
+			<option *ngFor="let item of items1" [value]="item">{{item}}</option>
+		</select>
+		<select [(ngModel)]="model.select2" [ngModelOptions]="{standalone: true}" [size]="items2.length" multiple>
+			<option *ngFor="let item of items2" [value]="item">{{item}}</option>
+		</select>
 	</div>
 	<input type="button" (click)="onSubmit()" value="click">
-	
 </form>

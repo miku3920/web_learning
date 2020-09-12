@@ -8,9 +8,13 @@ import { MyFormModel } from './myformmodel'
 export class AppComponent {
 	message: string
 
-	model = new MyFormModel('message...', false, 'A')
+	model = new MyFormModel('', [])
 
-	onSubmit():void {
-		this.message = `${this.model.msg}, ${this.model.check}, ${this.model.radio}`
+	items1 = ['北海道', '本州', '四國', '九州', '沖繩']
+
+	items2 = ['Windows', 'macOS', 'Linux', 'Android', 'iOS']
+
+	onSubmit(): void {
+		this.message = `${this.model.select1} [${this.model.select2}]`
 	}
 }

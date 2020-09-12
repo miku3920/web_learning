@@ -1,7 +1,6 @@
 export class MyFormModel {
 	constructor(
-		public msg: string,
-		public check: boolean,
-		public radio: string,
+		public select1: string,
+		public select2: string[],
 	) { }
 }
