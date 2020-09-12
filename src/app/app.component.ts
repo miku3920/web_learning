@@ -4,14 +4,13 @@ import { MyFormModel } from './myformmodel'
 @Component({
 	selector: 'app-form',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-	message: string;
+	message: string
 
-	model = new MyFormModel('message...');
+	model = new MyFormModel('message...', false, 'A')
 
 	onSubmit():void {
-		this.message = `you typed: ${this.model.msg}`
+		this.message = `${this.model.msg}, ${this.model.check}, ${this.model.radio}`
 	}
 }
