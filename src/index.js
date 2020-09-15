@@ -4,6 +4,6 @@ import './index.css';
 import MyComponent from './App';
 
 ReactDOM.render(
-	<MyComponent />,
+	<MyComponent content="這是 content 的內容值。" />,
 	document.getElementById('msg'),
 );
