@@ -23,6 +23,10 @@ module.exports = {
 			'error',
 			{ 'extensions': ['.js', '.jsx'] },
 		],
+		'react/jsx-indent-props': [
+			'error',
+			'tab',
+		],
 		'react/jsx-indent': [
 			'error',
 			'tab',

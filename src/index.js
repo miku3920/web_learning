@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import MyComponent from './App';
+import Component from './app.component';
 
 ReactDOM.render(
-	<MyComponent content="這是 content 的內容值。" />,
+	<Component title="MyTitle Component" content="this is MyItem Component." />,
 	document.getElementById('msg'),
 );
