@@ -1,19 +1,19 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Title from './app.title';
-import Item from './app.item';
+import React, { useCallback } from 'react';
 
-function Component({ title, content }) {
+function Component({ msg }, dispatch) {
+	const handleOnClick = useCallback(() => {
+		alert('已點選！');
+	}, []);
 	return (
 		<div>
-			<Title title={title} />
-			<Item content={content} />
+			<p>{msg}</p>
+			<input type="button" value="click" onClick={handleOnClick} />
 		</div>
 	);
 }
 Component.displayName = 'component';
 Component.propTypes = {
-	title: PropTypes.string.isRequired,
-	content: PropTypes.string.isRequired,
+	msg: PropTypes.string.isRequired,
 };
 export default Component;
