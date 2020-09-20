@@ -10,7 +10,6 @@ class Component extends React.Component {
 	}
 
 	handleOnChange(event) {
-		console.log(event.target.value);
 		this.inputValue = event.target.value;
 	}
 
@@ -21,9 +20,10 @@ class Component extends React.Component {
 	}
 
 	render() {
+		const { msg } = this.state;
 		return (
 			<div>
-				<p>{this.state.msg}</p>
+				<p>{msg}</p>
 				<input type="text" onChange={this.handleOnChange} />
 				<input type="button" value="click" onClick={this.handleOnClick} />
 			</div>
